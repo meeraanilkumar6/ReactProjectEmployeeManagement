@@ -1,0 +1,22 @@
+.card img {
+  width: 100%;            /* Full width of the card */
+  height: auto;          /* Maintain aspect ratio */
+}
+
+.image-container {
+  position: relative;     /* Needed for absolute positioning */
+  width: 100%;           /* Full width of the card */
+  height: 0;             /* Set height to 0 */
+  padding-top: 75%;      /* Aspect ratio (height/width) - example for 4:3 ratio */
+  overflow: hidden;      /* Hide overflow */
+}
+
+.image-container img {
+  position: absolute;     /* Position image absolutely within container */
+  top: 50%;              /* Center vertically */
+  left: 50%;             /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset by half the width/height */
+  min-width: 100%;       /* Ensure it fills the container */
+  min-height: 100%;      /* Ensure it fills the container */
+  object-fit: cover;     /* Cover without distortion */
+}
